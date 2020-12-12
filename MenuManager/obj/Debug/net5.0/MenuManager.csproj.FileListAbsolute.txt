@@ -1,0 +1,12 @@
+/media/simone/datas/work/dotnet5/test_02/MenuManager/bin/Debug/net5.0/MenuManager.deps.json
+/media/simone/datas/work/dotnet5/test_02/MenuManager/bin/Debug/net5.0/MenuManager.dll
+/media/simone/datas/work/dotnet5/test_02/MenuManager/bin/Debug/net5.0/ref/MenuManager.dll
+/media/simone/datas/work/dotnet5/test_02/MenuManager/bin/Debug/net5.0/MenuManager.pdb
+/media/simone/datas/work/dotnet5/test_02/MenuManager/obj/Debug/net5.0/MenuManager.csprojAssemblyReference.cache
+/media/simone/datas/work/dotnet5/test_02/MenuManager/obj/Debug/net5.0/MenuManager.GeneratedMSBuildEditorConfig.editorconfig
+/media/simone/datas/work/dotnet5/test_02/MenuManager/obj/Debug/net5.0/MenuManager.AssemblyInfoInputs.cache
+/media/simone/datas/work/dotnet5/test_02/MenuManager/obj/Debug/net5.0/MenuManager.AssemblyInfo.cs
+/media/simone/datas/work/dotnet5/test_02/MenuManager/obj/Debug/net5.0/MenuManager.csproj.CoreCompileInputs.cache
+/media/simone/datas/work/dotnet5/test_02/MenuManager/obj/Debug/net5.0/MenuManager.dll
+/media/simone/datas/work/dotnet5/test_02/MenuManager/obj/Debug/net5.0/ref/MenuManager.dll
+/media/simone/datas/work/dotnet5/test_02/MenuManager/obj/Debug/net5.0/MenuManager.pdb
