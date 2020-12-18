@@ -56,8 +56,9 @@ namespace MenuCli {
 				//	Check if this is a menu father
 				var subMenusPresent = _Menu.Any(sm => sm.Ancestor == m);
 				var subMenuIdentifier = subMenusPresent ? " >>" : String.Empty;
-				var menuOutput = $"{m.Selector} - {m.Title}{subMenuIdentifier}";
-				Console.WriteLine(menuOutput);
+				//var menuOutput = $"{m.Selector} - {m.Title}{subMenuIdentifier}";
+				//Console.WriteLine(menuOutput);
+				Console.WriteLine($"{m}{subMenuIdentifier}");
 			});
             return new();
 		}
@@ -92,10 +93,11 @@ namespace MenuCli {
 				if(hasSubMenus) {
 					//	This is a menu which leads to another menu
 					CurrentMenu = _Menu.First(m => m == commandFound);
-					if(iShowMenu)
+					if(iShowMenu) 
 						retValue = _PrintMenu();
 				} else {
-					retValue = commandFound.Func();
+					if(commandFound.Func != null)
+						retValue = commandFound.Func();
 					if(!retValue.IsOk) {
 						Console.WriteLine(retValue.Message);
 					}
@@ -189,5 +191,11 @@ namespace MenuCli {
         public HandlerFunc Func { get; init; }
         public bool ShowAtEveryLevel { get; init; } = false;
         public IMenu Ancestor { get; init; }
-    } 
+        public override string ToString() => $"{Selector} - {Title}";
+    }
+	public record CMenuVar<T> : CMenu {
+		public CMenuVar(string iSelector, string iTitle, Func<T> iValueGetter) : base(iSelector, iTitle) => ValueGetter = iValueGetter;
+		public Func<T> ValueGetter { get; init; }
+        public override string ToString() => base.ToString() + $" <{ValueGetter()}>";
+	}
 }

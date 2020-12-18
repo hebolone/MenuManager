@@ -14,6 +14,7 @@ namespace Tester {
     class Program {
         static void Main(string[] args) {
             MenuManager mm = new("Menu con net 5");
+            CFuncs funcs = new();
             var mnu_1 = new CMenu("1", "Prova") { Func = () => {
                 Console.WriteLine("Prova 1");
                 return new MenuManager.MenuResponse(); 
@@ -32,6 +33,10 @@ namespace Tester {
             mm.AddMenu(mnu_2);
             mm.AddMenu(mnu_2_1);
             mm.AddMenu(mnu_2_2);
+
+            mm.AddMenu(new List<IMenu>() {
+                new CMenuVar<bool>("3", "Set visibility", funcs.GetVisibility) { Func = funcs.ChangeVisibility }
+            });
 
             Parser.Default.ParseArguments<Options>(args).WithParsed<Options>(o => {
                 if (o.Credits) {
