@@ -134,7 +134,7 @@ namespace MenuCli {
 				CurrentMenu = null;
 			});	
 		}
-		public void DoWork(){
+		public void InteractiveMode(){
 			_PrintMenu();
 			var goOn = true;
 			while(goOn) {

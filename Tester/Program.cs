@@ -46,7 +46,7 @@ namespace Tester {
                     if(o.Run.Any()) {
                         mm.InstantInterpreter(o.Run);
                     } else {
-                        mm.DoWork();
+                        mm.InteractiveMode();
                     }
                 }
             });
